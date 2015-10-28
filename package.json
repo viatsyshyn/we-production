@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "postinstall": "npm -g i bower && bower install"
+    "postinstall": "npm -g i bower && bower install && bundle install"
   },
   "dependencies": {
     "async": "^1.5.0",
