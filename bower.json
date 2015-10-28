@@ -25,5 +25,8 @@
     "jquery": "~2.1.4",
     "youtube-player": "https://github.com/viatsyshyn/youtube-player/releases/download/0.1.2/youtube-player.zip",
     "font-awesome": "~4.4.0"
+  },
+  "resolutions": {
+    "jquery": "~2.1.4"
   }
 }
