@@ -1,0 +1,47 @@
+extends _layout
+
+mixin thumbnail(image)
+    img.thumbnail(src=image.url, width=image.width, height=image.height, alt=image.description)
+
+block page
+    .video-cnt.slide-show.with-pattern(
+        style="background-image: url(/images/slide-show/8.jpg)"
+        data-items="/images/slide-show/5.jpg;/images/slide-show/6.jpg;/images/slide-show/7.jpg;/images/slide-show/8.jpg")
+    .page-content
+        .page-block
+            .banner WE will do the best video you ever had
+    .page-white
+        .page-block
+            h2 Blog
+
+            .wrapper
+                each activity in activitesList
+                    .activity(class = [activity.verb, activity.object.objectType])
+                        case activity.verb
+                            when 'post'
+                                .post
+                                    case activity.object.objectType
+                                        when 'note'
+                                            .note
+                                                a(href=activity.object.url)= activity.object.displayName
+                                                p!= activity.object.content
+                                                each attachment in activity.object.attachments
+                                                    .attachment
+                                                        a(href=attachment.url)= attachment.objectType + ' ' + attachment.displayName
+                                                        p!= attachment.content
+                                                        case attachment.objectType
+                                                            when 'video'
+                                                                +thumbnail(attachment.image)
+                                                                //p= JSON.stringify(attachment.embed)
+                                                                //p= JSON.stringify(attachment.thumbnails)
+                                                            when 'album'
+                                                                each thumbnail in attachment.thumbnails
+                                                                    a(href=thumbnail.url): +thumbnail(thumbnail.image)
+                                                            when 'photo'
+                                                                a(href=attachment.url): +thumbnail(attachment.fullImage)
+                                                            default
+                                                                p=JSON.stringify(attachment)
+                                        default
+                                            p= JSON.stringify(activity.object)
+                            default
+                                p= JSON.stringify(activity)

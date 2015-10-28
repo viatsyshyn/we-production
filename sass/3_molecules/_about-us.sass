@@ -1,0 +1,149 @@
+.about-us
+  .prod-cycle
+    h3
+      text-transform: uppercase
+      font-size: 14pt
+      line-height: 120%
+      text-align: center
+      font-weight: 300
+
+    h4
+      font-size: 20px
+      line-height: $bl
+      text-align: center
+      margin: 0 0 20px
+
+    .diagram
+      $top: 73px
+      background: inline-image('inline/line.svg') 50% $top no-repeat
+      background-size: 100%
+      min-height: 350px + $top
+      margin: 45px 0 60px
+      padding: 0
+
+    .preview
+      width: 142px
+      border-radius: 0
+      +box-shadow(none)
+
+    .col
+      width: 20%
+      margin: 0 2.5% 0
+      float: left
+      font-size: .6*$bl
+      line-height: $bl
+      font-weight: 300
+      text-align: center
+
+
+  .faces
+    text-align: center
+    padding-bottom: 36px
+    background-color: #f2f2f2
+    position: relative
+    &::before, &::after
+      content: ' '
+      position: absolute
+      top: 0
+      bottom: 0
+      background-color: #f2f2f2
+      pointer-events: none
+      width: 3000px
+
+      .mobile &
+        display: none
+
+    &::before
+      right: 100%
+
+    &::after
+      left: 100%
+
+    .wrapper
+      font-size: 0
+
+    .with-loader
+      width: 25%
+      display: inline-block
+      text-align: center
+
+      position: relative
+      vertical-align: top
+
+      font-size: 11pt
+
+      h3
+        margin-bottom: 8px
+
+      span
+        color: #ff6f00
+
+      > span
+        color: #79a596
+
+      span, p
+        font-weight: 300
+
+      p
+        line-height: 160%
+
+    .with-loader::before
+      top: 72px
+
+    .preview
+      border-radius: 0
+      +single-box-shadow(none)
+
+    A
+      text-decoration: none
+
+      &:hover .preview
+        position: relative
+        @extend .grayscale
+
+        &::after
+          content: ' '
+          position: absolute
+          top: 0
+          left: 0
+          right: 0
+          bottom: 0
+          background: transparentize(black, .8) 80% 80% no-repeat
+          background-image: inline-image("inline/f.png")
+          border-radius: 50%
+
+  .clients
+    .wrapper
+      font-size: 0
+
+    A
+      position: relative
+      display: inline-block
+      width: 20%
+      margin: 0 2.5% $bl
+      height: 7 * $bl
+      text-align: center
+      font-size: .75*$bl
+
+    h3
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      z-index: 2
+      line-height: 2*$bl
+      margin: 0
+      font-weight: 500
+
+    .person .preview
+      margin-top: -12px
+
+    .company h3
+      font-size: 0
+
+    .preview
+      border-radius: 0
+      +single-box-shadow(none)
+
+  & + .footer
+    border: none

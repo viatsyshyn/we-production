@@ -1,0 +1,78 @@
+extends _layout
+
+block page
+    .video-cnt.slide-show.with-pattern(
+    style="background-image: url(/images/slide-show/5.jpg)"
+    data-items="/images/slide-show/6.jpg;/images/slide-show/7.jpg;/images/slide-show/8.jpg;/images/slide-show/5.jpg")
+
+    .page-content
+        .page-block
+            .banner WE will do the best video you ever had
+
+    .page-white
+        .page-block.prod-cycle
+            h2 About us
+            h3
+                | Together with you, we formulate the optimal solution to
+                br
+                | satisfy all components:
+            .diagram
+                .col
+                    span.preview(style="background-image: url(/images/production.jpg); background-position: -0px 0")
+                    h4 Concept
+                    | WE generate an idea, develop a detailed scenario
+                .col
+                    span.preview(style="background-image: url(/images/production.jpg); background-position: -142px 0")
+                    h4 Time
+                    | WE define the most convenient time of filming, and its optimal duration
+                .col
+                    span.preview(style="background-image: url(/images/production.jpg); background-position: -284px 0")
+                    h4 Location
+                    | WE work where you conveniently, spent shooting anywhere in the world. The geography of our projects is free of borders:
+                    br
+                    b Ukraine, Poland, Denmark, Sweden, Azerbaijan, Kazakhstan, Turkey, Israel
+                .col
+                    span.preview(style="background-image: url(/images/production.jpg); background-position: -426px 0")
+                    h4 Scale
+                    | WE will make your project regardless of complexity, attract the necessary resources and facilities.
+
+        .page-block.faces
+            h2 Our Team
+            .wrapper
+                A.with-loader(href="http://facebook.com/", target="_blank")
+                    span.preview(style="background-image: url(/images/people.jpg); background-position: -1px 0")
+                    br
+                    h3 Grygorii Ryba
+                    span DoP, producer
+                    br
+                    span director
+                A.with-loader(href="http://facebook.com/", target="_blank")
+                    span.preview(style="background-image: url(/images/people.jpg); background-position: -145px 0")
+                    br
+                    h3 Teodor Neshchadym
+                    span Director, editor
+                    br
+                    span executive producer
+                A.with-loader(href="http://facebook.com/", target="_blank")
+                    span.preview(style="background-image: url(/images/people.jpg); background-position: -289px 0")
+                    br
+                    h3 Sergiy Kniazev
+                    span DoP, editor
+                    br
+                    span animator
+                A.with-loader(href="http://facebook.com/", target="_blank")
+                    span.preview(style="background-image: url(/images/people.jpg); background-position: -433px 0")
+                    br
+                    h3 Anastasia Chekirda
+                    span PM, editor
+                    br
+                    span supervisor
+
+        .page-block.clients
+            h2 Our Clients
+            .wrapper
+                each client in clientsList
+                    A.with-loader(class = client.type, href = client.link, target = "_blank", title = client.title)
+                        span.preview(style="background-image: url(/clients/#{client.image})")
+                        h3= client.title
+    include _map

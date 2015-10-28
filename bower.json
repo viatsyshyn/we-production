@@ -1,0 +1,29 @@
+{
+  "name": "we-production-com-ua",
+  "description": "we-production.com.ua",
+  "main": "index.js",
+  "authors": [
+    "Volodymyr Iatsyshyn <viatsyshyn@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "homepage": "https://github.com/viatsyshyn/we-production",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "youtube-player": "https://github.com/viatsyshyn/youtube-player/releases/download/0.1.2/youtube-player.zip",
+    "font-awesome": "~4.4.0"
+  }
+}

@@ -1,0 +1,41 @@
+.with-static-menu
+  padding-top: 43px
+
+  .top-menu
+    position: fixed
+    top: -43px
+    left: 0
+    right: 0
+    z-index: 4
+    height: 0
+
+  .main-menu
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    z-index: 3
+    padding-top: 3px
+    line-height: 70px
+    height: 70px
+    background: transparentize(white, 0)
+    +single-transition(all, .15s, linear)
+    +single-box-shadow(transparentize(black, .8), 0, 1px, 1px)
+
+  .full-logo
+    +transform(scale(.5))
+    top: 40px
+    left: -24px
+    +single-transition(all, .15s, ease-in)
+
+  &.with-sub-menu
+    .sub-menu
+      z-index: 1
+      position: fixed
+      top: 73px
+      left: 0
+      right: 0
+      line-height: 40px
+      padding-top: 0
+      background: transparentize(white, 0)
+      +single-transition(line-height, .15s, linear)

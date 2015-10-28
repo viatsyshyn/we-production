@@ -1,0 +1,110 @@
+[
+  {
+    "title": "Canon 17-40 mm f/4.0L USM",
+    "price": 10,
+    "desc": "Wide-angle lens",
+    "image": "17-40.jpg"
+  },
+  {
+    "title": "Canon TSE 17 mm f/4.0L USM",
+    "price": 15,
+    "desc": "Tilt-shift, ultra wide-angle prime lens",
+    "image": "17-4_0-tilt-shift.jpg"
+  },
+  {
+    "title": "Canon 24-70 mm f/2.8L USM",
+    "price": 10,
+    "desc": "Wide-to-telephoto zoom lens",
+    "image": "24-70.jpg"
+  },
+  {
+    "title": "Canon 24-105 mm f/4.0L IS USM",
+    "price": 10,
+    "desc": "Wide-to-telephoto zoom lens with image stabilization",
+    "image": "24-105.jpg"
+  },
+  {
+    "title": "Canon 70-200 mm f/2.8L IS II USM",
+    "price": 15,
+    "desc": "Telephoto zoom lens with image stabilization",
+    "image": "70-200.jpg"
+  },
+  {
+    "title": "Canon 50 mm f/1.2L IS USM",
+    "price": 10,
+    "desc": "Normal prime lens",
+    "image": "canon-50-1_2.jpg"
+  },
+  {
+    "title": "Zeiss 50 mm f/1.4L ZE Planar T*",
+    "price": 10,
+    "desc": "Normal manual focus lens for EF bayonet",
+    "image": "carl-zeiss-50-1_4.jpg"
+  },
+  {
+    "title": "Sigma 35 mm f/1.4L IDG HSM",
+    "price": 10,
+    "desc": "Wide prime lens for EF bayonet",
+    "image": "sigma-35.jpg"
+  },
+  {
+    "title": "Lens kit",
+    "price": 80,
+    "desc": "8 lenses for all situations",
+    "image": "full-lens-kit.jpg"
+  },
+  {
+    "title": "Canon 5D Mark III Body",
+    "price": 25,
+    "desc": "Professional full-frame DSLR camera, 22.3 megapixel CMOS sensor, 720p 60 fps slow-motion",
+    "image": "canon-5d-mkIII.jpg"
+  },
+  {
+    "title": "Sony NEX FS700",
+    "price": 110,
+    "desc": "Professional super 35 camcoder, Super Slow-Motion up to 960 fps, 4k-ready, 12-Bit dynamic range. Price include camera assistant",
+    "image": "sony-nex-fs-700.jpg"
+  },
+  {
+    "title": "Red Scarlet-X collection",
+    "price": 160,
+    "desc": "Professional digital motion capture camera with 14 mpx Mysterium-X sensor, 13.5-Bit dynamic range and 4k Redcode-Raw. Include camera assistant",
+    "image": "red-scarlett-x.jpg"
+  },
+  {
+    "title": "GoPro 3 black",
+    "price": 10,
+    "desc": "Action camera",
+    "image": "gopro-3.jpg"
+  },
+  {
+    "title": "Dedolight DLH-4 150 W",
+    "price": 10,
+    "desc": "Universal quartz halogen light head with double aspheric lenses and zoom focus. Include 10 Watt spot light, dimmer and cable",
+    "image": "dedolight-dlh4-tungsten.jpg"
+  },
+  {
+    "title": "VS light 200",
+    "price": 10,
+    "desc": "Portable, cool-running fluorescent lighting fixture",
+    "image": "vs-light.jpg"
+  },
+  {
+    "title": "Glidetrack camera slider",
+    "price": 10,
+    "desc": "1m slider and track that supports cameras and accessories weighting up to 22 pounds",
+    "image": "glidetrack-slider.jpg"
+  },
+  {
+    "title": "Manfrotto fluid monopod",
+    "price": 10,
+    "desc": "4-section aluminum monopod rises to a height up to 6.6\",folds down to 30,3 and includes compact fluid head",
+    "image": "mannfrotto-monopod.jpg"
+  },
+  {
+    "title": "Steadycam Stabicam",
+    "price": 10,
+    "desc": "System of stabilizationn for DSLR cameras and camcorders weighting up to 3,5 kg",
+    "image": "steadycam.jpg"
+  }
+]

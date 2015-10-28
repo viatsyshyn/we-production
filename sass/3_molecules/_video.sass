@@ -1,0 +1,44 @@
+.video
+  .videos
+    font-size: 0
+    margin: 36px 36px 0
+    width: auto
+    text-align: center
+    max-width: none
+
+    A
+      +transform(scale(0))
+      position: relative
+      display: inline-block
+      text-align: center
+      width: 0
+      opacity: 0
+      height: 200px
+
+      font-size: 12pt
+      line-height: 120%
+      font-weight: 400
+      margin-bottom: 36px
+      vertical-align: top
+
+      &.current
+        font-weight: 500
+        color: #ff6f00
+
+        .preview
+          +single-box-shadow(transparentize(#ff6f00, .5), 0, 0, 0, 1px)
+
+      text-transform: capitalize
+
+      +transition(all 0s, color .3s ease-in)
+
+    .with-loader::before
+      top: 72px
+
+    @each $i in all, commercial, music, social, concert, corporate
+      &.#{$i} .#{$i}
+        +transform(scale(1))
+        width: (920px/4)
+        opacity: 1
+
+        +transition(width .1s linear, opacity .3s ease-in .2s, transform .5s ease-out 0s)

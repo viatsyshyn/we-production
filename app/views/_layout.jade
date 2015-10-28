@@ -1,0 +1,33 @@
+doctype html
+html
+    head
+        title We Production
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="google-site-verification", content="xMHiShc-TGNgudullBPBjNXCH66rCGX5GCOQ0YnOSv4")
+        link(rel='stylesheet', href='/main.css')
+        script(src="//www.youtube.com/iframe_api")
+        script(src="//maps.googleapis.com/maps/api/js?key=" + keys.GOOGLE_API_BROWSER_KEY)
+        script(src="/bower/jquery/dist/jquery.min.js")
+        script(src="/demo.js")
+    body
+        .top-menu
+            menu.page-block
+                A(href="mailto:we@we-cinema.com", target="_blank").email &nbsp;
+                A(href="https://www.facebook.com/WeProductionGroup", target="_blank").facebook &nbsp;
+                A(href="http://youtube.com/", target="_blank").youtube &nbsp;
+                A(href="http://twitter.com/", target="_blank").twitter &nbsp;
+                A(href="#").lang EN
+                A.full-logo(href="/") WE PRODUCTION
+        .page(class=pageClass)
+            .main-menu
+                menu.page-block
+                    A(href="/about-us", class=pageClass == 'about-us' ? 'active' : '') About us
+                    A(href="/video", class=pageClass == 'video' ? 'active' : '') Video
+                    //A(href="/blog", class=pageClass == 'blog' ? 'active' : '') Blog
+                    A(href="/rent", class=pageClass == 'rent' ? 'active' : '') Rent
+
+            block page
+        .footer
+            .page-block
+                | WE Production &copy; 2015

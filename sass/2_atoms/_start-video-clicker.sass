@@ -1,0 +1,42 @@
+.start-video-clicker
+  display: block
+  height: 100%
+
+  background: inline-image("inline/play.png") 50% 50% no-repeat
+  opacity: .6
+  +single-transition(opacity, .3s, ease-in)
+
+  &:hover
+    opacity: .9
+
+  position: relative
+
+  .progressBar
+    display: none
+    opacity: 0
+    position: absolute
+    height: 0
+    left: 20%
+    right: 20%
+    bottom: 5%
+    z-index: 500
+    background-color: transparentize(#333, .25)
+    overflow: hidden
+    cursor: pointer
+    +box-shadow(0 0 1px 0 transparentize(#fff, .7))
+    border-radius: 4px
+
+    .elapsed
+      position: absolute
+      width: 0
+      height: 100%
+      background-color: transparentize(#ff6f00, .5)
+      border-right: 1px solid #ff6f00
+      +single-transition(width, 1s, linear)
+
+
+  &:hover .progressBar
+    height: 8px
+    margin-top: -4px
+    +single-transition(all, .2s, ease-in)
+    opacity: 1

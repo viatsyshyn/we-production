@@ -1,0 +1,24 @@
+.location-info
+  text-align: right
+
+  font-weight: 300
+  font-size: 3/4*$bl
+  //line-height: 135%
+  color: #fff
+  white-space: pre-wrap
+  +text-shadow(transparentize(#333, .7) 0 1px 1px)
+
+  +single-transition(opacity, .3s, ease-out)
+
+  span
+    font-weight: 400
+
+  B
+    font-size: $bl
+    line-height: 2 * $bl
+    font-weight: 500
+
+  &.static
+    position: absolute
+    right: $gb
+    bottom: $bl

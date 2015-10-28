@@ -1,0 +1,24 @@
+extends _layout
+
+block page
+    .video-cnt.slide-show.with-pattern(
+        style="background-image: url(/images/slide-show/7.jpg)"
+        data-items="/images/slide-show/6.jpg;/images/slide-show/5.jpg;/images/slide-show/8.jpg;/images/slide-show/7.jpg")
+    .page-content
+        .page-block
+            .banner WE will do the best video you ever had
+    .page-white
+        .page-block
+            h2 Rent
+
+        .page-block.goods
+            each rent in rentList
+                .with-loader
+                    span.preview.grayscale(style="background: url(/rent/#{rent.image})")
+                    br
+                    h3= rent.title
+                    = rent.desc
+                    br
+                    span $#{rent.price} per day
+
+    include _map

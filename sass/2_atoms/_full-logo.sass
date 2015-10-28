@@ -1,0 +1,39 @@
+.full-logo
+  position: absolute
+
+  top: 3 * $bl + 2px
+  left: $gb
+  margin-left: 0 !important
+
+  width: 170px
+  height: 80px
+
+  opacity: 1 !important
+  text-indent: -500em
+  font-size: 0
+  outline: none
+
+  &::after, &::before
+    content: ' '
+    position: absolute
+    height: 100%
+
+    bottom: 0
+    background: inherit
+
+  &::before
+    background: inline-image("inline/we-text.svg") 100% 50% no-repeat
+    right: 0
+    width: 90px
+    background-size: 90%
+
+  &::after
+    left: 0
+    width: 80px
+    background: inline-image("inline/we-logo.svg") 0 0 no-repeat
+
+
+  &:hover::after
+    +transform(rotateY(360deg))
+    +single-transition(all, .3s, ease-in-out)
+

@@ -1,0 +1,48 @@
+.page
+  //min-height: 100%
+  box-sizing: border-box
+  margin-top: -3px
+
+  .page-content, .video-cnt
+    height: 300px
+
+  @media screen and (min-height: 600px)
+    .page-content, .video-cnt
+      height: 400px
+
+  @media screen and (min-height: 750px)
+    .page-content, .video-cnt
+      height: 500px
+
+  @media screen and (min-height: 900px)
+    .page-content, .video-cnt
+      height: 600px
+
+  .page-content
+    +single-transition(height, 1s, ease-in-out)
+
+  .page-block
+    height: 100%
+
+  .page-white
+    background: #fff
+
+
+  h2
+    text-transform: uppercase
+    margin: 0 auto 36px
+    padding: 36px 0 18px
+    position: relative
+    font-size: 1.5em
+    text-align: center
+    width: 200px
+
+    &::after
+      content: ' '
+      position: absolute
+      bottom: 0
+      left: 90px
+      right: 90px
+      height: 2px
+      background: #ff6f00
+      border-radius: 1px

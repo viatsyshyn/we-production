@@ -1,0 +1,45 @@
+.top-menu
+  display: block
+  background: #333
+  //border-top: 1px solid transparent
+  position: relative
+  z-index: 2
+
+  &::after
+    content: ' '
+    position: absolute
+    left: 0
+    right: 0
+    height: 3px
+    bottom: -3px
+    background: transparentize(#79a596, .25)
+
+  menu
+    margin: 0
+    text-align: right
+
+  A
+    line-height: 43px
+    margin-left: 36px
+    text-decoration: none
+    opacity: .75
+    +single-transition(opacity, .3s, ease-out)
+    color: #fff
+
+    &:hover
+      opacity: 1
+
+    @each $item in email, facebook, twitter, youtube
+      &.#{$item}
+        padding: 0 12px
+        display: inline-block
+        position: relative
+        &::after
+          content: ' '
+          position: absolute
+          top: 50%
+          left: 50%
+          height: 24px
+          width: 24px
+          +icons-24-sprite($item)
+          +transform(translate(-50%, -50%))
