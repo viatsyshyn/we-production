@@ -41,7 +41,7 @@ exports = module.exports = function (app, next) {
 
     var clientsList = JSON.parse(FS.readFileSync('./public/clients/clients.json'));
     var rentList = JSON.parse(FS.readFileSync('./public/rent/rent.json'));
-    var plusActivities = JSON.parse(FS.readFileSync('./plus/102816136635817065628.json')).items;
+    //var plusActivities = JSON.parse(FS.readFileSync('./plus/102816136635817065628.json')).items;
 
     app.get('/about-us', function(req, res) {
         res.render('about-us', { pageClass: 'about-us', clientsList: clientsList });
@@ -51,9 +51,9 @@ exports = module.exports = function (app, next) {
         res.render('rent', { pageClass: 'rent', rentList: rentList });
     });
 
-    app.get('/blog', function(req, res) {
+    /*app.get('/blog', function(req, res) {
         res.render('blog', { pageClass: 'blog', activitesList: plusActivities });
-    });
+    });*/
 
     app.get('/refresh-video-catalog', function(req, res, next){
         youtube.refreshVideoCatalog(function (err, videoCatalog) {
