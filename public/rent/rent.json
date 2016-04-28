@@ -106,5 +106,23 @@
     "price": 10,
     "desc": "System of stabilizationn for DSLR cameras and camcorders weighting up to 3,5 kg",
     "image": "steadycam.jpg"
+  },
+  {
+    "title": "DJI Ronin",
+    "price": 50,
+    "desc": "3-axis stabilised handheld gimbal system with expander ",
+    "image": "dji-ronin.jpg"
+  },
+  {
+    "title": "DJI Inspire 1",
+    "price": 100,
+    "desc": "Quadrocopter with 4k camera",
+    "image": "dji-inspire.jpg"
+  },
+  {
+    "title": "DJI Phantom 3 professional",
+    "price": 50,
+    "desc": "Quadrocopter with 4k camera",
+    "image": "phantom-3.jpg"
   }
 ]
