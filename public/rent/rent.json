@@ -124,5 +124,41 @@
     "price": 50,
     "desc": "Quadrocopter with 4k camera",
     "image": "phantom-3.jpg"
+  },
+  {
+    "title": "Sennheiser ew100",
+    "price": 15,
+    "desc": "Wireless Microphone Combo system",
+    "image": "sennheiser-g3.jpg"
+  },
+  {
+    "title": "Sennheizer me66",
+    "price": 20,
+    "desc": "Boom Microphone set",
+    "image": "sennheiser-e66.jpg"
+  },
+  {
+    "title": "Tascam DR44WL",
+    "price": 10,
+    "desc": "Portable hendheld sound recorder with WiFi",
+    "image": "tascam-dr44wl.jpg"
+  },
+  {
+    "title": "Zoom H4N",
+    "price": 10,
+    "desc": "Hendheld 4-channel sound recorder",
+    "image": "zoom-h4n.jpg"
+  },
+  {
+    "title": "Sony PXW-FS7 XDCAM",
+    "price": 100,
+    "desc": "Professional super 35mm E-Mount Camera with Internal 4K and super slow motion up to 120 fps",
+    "image": "sony-fs-7.jpg"
+  },
+  {
+    "title": "Small HD DP-7",
+    "price": 15,
+    "desc": "On-camera field monitor, 7\" LCD-IPS, 1280 x 800 resolution",
+    "image": "small-hd-dp-7.jpg"
   }
 ]
