@@ -24,7 +24,7 @@ async.waterfall([
         var videoCatalogTimestamp = new Date();
         app.use(function (req, res, next) {
             if (videoCatalogTimestamp.getTime() + 4 * 3660 * 1000 < new Date().getTime() ) {
-                refreshVideoCatalog();
+                youtube.refreshVideoCatalog();
                 videoCatalogTimestamp = new Date();
             }
 
