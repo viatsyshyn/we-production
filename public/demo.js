@@ -216,6 +216,9 @@ jQuery(function($) {
         player.play();
 
         history.replaceState(null, null, $this.attr('href'));
+        
+        ga && ga('send', 'pageview', location.pathname);
+        
         return false;
     }).on('click', '.sub-menu A[data-video-id]', function () {
         var $this = $(this),
@@ -247,6 +250,9 @@ jQuery(function($) {
         }, 200);
 
         history.replaceState(null, null, $this.attr('href'));
+        
+        ga && ga('send', 'pageview', location.pathname);
+        
         return false;
     });
 
