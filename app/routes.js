@@ -20,10 +20,11 @@ exports = module.exports = function (app, next) {
     });
 
     app.get(['/video', '/video/:playlistTag', '/video/:playlistTag/:videoId'], function(req, res){
-        var playlistTag = req.params.playlistTag || 'all';
         var videoCatalog = youtube.getVideoCatalog().videos;
         var playlists = youtube.getPlaylists();
 
+        var playlistTag = req.params.playlistTag || ((playlists || [])[0] || {}).tag;        
+        
         var video = videoCatalog.filter(function (_) {
                 return _.id == req.params.videoId;
             })[0] || videoCatalog.filter(function (_) {
