@@ -12,13 +12,13 @@ var API_KEY = process.env.GOOGLE_API_SERVER_KEY;
 var featuredPlaylistId = 'PLzV6tpn4rBOWxesUoQmuAZZ_JmULtVCff';
 
 var playlists = [
-    {tag: 'all',        id: 'PLzV6tpn4rBOUztp8xznAXtoynct-3hmE1'},
+    //{tag: 'all',        id: 'PLzV6tpn4rBOUztp8xznAXtoynct-3hmE1'},
     {tag: 'music',      id: 'PLzV6tpn4rBOXGk7FCHEPdmjOM5TVehw8q'},
     {tag: 'commercial', id: 'PLzV6tpn4rBOV_3aTyWe7jyi-h8nmmtG_8'},
     {tag: 'social',     id: 'PLzV6tpn4rBOXkqQQHrqeNjWBQB06XYvIK'},
-    {tag: 'corporate',  id: 'PLzV6tpn4rBOWCFYy4x1VkxZgb25YonsjS'},
+    //{tag: 'corporate',  id: 'PLzV6tpn4rBOWCFYy4x1VkxZgb25YonsjS'},
     //{tag: 'tv-show',    id: 'PLzV6tpn4rBOWCFYy4x1VkxZgb25YonsjS', title: 'tv show'},
-    {tag: 'concert',    id: 'PLzV6tpn4rBOWXmSrPTxoIMmzFPrNLeveZ'},
+    //{tag: 'concert',    id: 'PLzV6tpn4rBOWXmSrPTxoIMmzFPrNLeveZ'},
 ];
 
 function playlistItemsList(playlistId, cb) {
