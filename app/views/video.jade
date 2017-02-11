@@ -21,19 +21,10 @@ block page
                             data-video-id = playlist.default.id)= playlist.title || playlist.tag
         .page-block.videos(class = playlistTag)
             each playlistItem in catalog
-                A.with-loader.all(href="/video/#{playlistTag}/#{playlistItem.id}"
+                A.with-loader(href="/video/#{playlistTag}/#{playlistItem.id}"
                     data-video-preview=playlistItem.maxres,
                     data-video-id=playlistItem.id,
                     class = playlistItem.tags.concat(playlistItem.id == video.id ? ['current'] : []))
                     span.preview(style="background-image: url(#{playlistItem.lores})")
                     br
                     = playlistItem.title
-
-
-//
-    A(href="/video/music") Music
-    A(href="/video/commercial") Commercial
-    A(href="/video/social") Social
-    A(href="/video/corporate") Corporate
-    A(href="/video/tv-show") TV Show
-    A(href="/video/concert") Concert
