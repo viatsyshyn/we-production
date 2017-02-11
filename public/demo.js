@@ -243,7 +243,8 @@ jQuery(function($) {
             .removeClass('concert')
             .removeClass('corporate')
             .removeClass('commercial')
-            .removeClass('social');
+            .removeClass('social')
+            .removeClass('sport');
 
         setTimeout(function () {
             $('.videos').addClass(playlistTag);
