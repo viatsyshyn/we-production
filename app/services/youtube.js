@@ -63,7 +63,8 @@ function buildVideoCatalog(featuredPlaylistId, playlists, complete) {
                             published: Math.ceil(Date.parse(_.publishedAt).valueOf() / 60000 * 60),
                             plRate: plIndex > 0 ? plIndex / playlists.length : 2,
                             vdRate: _.position / items.length,
-                            tags: [playlist.tag]
+                            tags: [playlist.tag],
+                            position: _.position
                         }
                     });
 
@@ -76,9 +77,7 @@ function buildVideoCatalog(featuredPlaylistId, playlists, complete) {
                     videos = playlists
                         .reduce(function (acc, _) { return acc.concat(_.items); }, [])
                         .sort(function (_1, _2) {
-                            return _1.published != _2.published ? _2.published - _1.published
-                                : _1.plRate != _2.plRate ? _1.plRate - _2.plRate
-                                : _1.vdRate - _2.vdRate;
+                            return _1.position - _2.position;
                         })
                         .filter(function (_) {
                             return $map[_.id] ? ([].push.apply($map[_.id].tags, _.tags), false) : (($map[_.id] = _), true);
