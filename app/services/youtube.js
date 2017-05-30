@@ -47,26 +47,28 @@ function buildVideoCatalog(featuredPlaylistId, playlists, complete) {
                 playlistItemsList(playlist.id, function (err, items) {
                     if (err) return next(err);
 
-                    playlist.items = items.map(function (_) {
-                        var $tmp = _.thumbnails;
-                        return {
-                            id: _.resourceId.videoId,
-                            maxres: ($tmp.maxres || $tmp.standard || $tmp.high).url,
-                            lores: ($tmp.medium || $tmp.default || $tmp.high).url,
-                            title: _.title.toLocaleLowerCase()
-                                .replace(/\([^\)]*\)/gi, '')
-                                .replace(/\[[^\]]*\]/gi, '')
-                                .replace(/\{[^\]]*\}/gi, '')
-                                .replace(/\/[^\/]*\//gi, '')
-                                .replace(/\d\d\.\d\d\.\d{2,4}/gi, ''),
-                            description: _.description,
-                            published: Math.ceil(Date.parse(_.publishedAt).valueOf() / 60000 * 60),
-                            plRate: plIndex > 0 ? plIndex / playlists.length : 2,
-                            vdRate: _.position / items.length,
-                            tags: [playlist.tag],
-                            position: _.position
-                        }
-                    });
+                    playlist.items = items
+                        .filter(function (_) { return _.thumbnails !== undefined })
+                        .map(function (_) {
+                            var $tmp = _.thumbnails;
+                            return {
+                                id: _.resourceId.videoId,
+                                maxres: ($tmp.maxres || $tmp.standard || $tmp.high).url,
+                                lores: ($tmp.medium || $tmp.default || $tmp.high).url,
+                                title: _.title.toLocaleLowerCase()
+                                    .replace(/\([^\)]*\)/gi, '')
+                                    .replace(/\[[^\]]*\]/gi, '')
+                                    .replace(/\{[^\]]*\}/gi, '')
+                                    .replace(/\/[^\/]*\//gi, '')
+                                    .replace(/\d\d\.\d\d\.\d{2,4}/gi, ''),
+                                description: _.description,
+                                published: Math.ceil(Date.parse(_.publishedAt).valueOf() / 60000 * 60),
+                                plRate: plIndex > 0 ? plIndex / playlists.length : 2,
+                                vdRate: _.position / items.length,
+                                tags: [playlist.tag],
+                                position: _.position
+                            }
+                        });
 
                     next();
                 })
