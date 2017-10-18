@@ -13,10 +13,10 @@ var featuredPlaylistId = 'PLzV6tpn4rBOWxesUoQmuAZZ_JmULtVCff';
 
 var playlists = [
     //{tag: 'all',        id: 'PLzV6tpn4rBOUztp8xznAXtoynct-3hmE1'},
-    {tag: 'sport',      id: 'PLzV6tpn4rBOXuNhjI7m7-ZcQRIdKiq31Q'},
     {tag: 'music',      id: 'PLzV6tpn4rBOXGk7FCHEPdmjOM5TVehw8q'},
-    {tag: 'social',     id: 'PLzV6tpn4rBOXkqQQHrqeNjWBQB06XYvIK'},
     {tag: 'commercial', id: 'PLzV6tpn4rBOV_3aTyWe7jyi-h8nmmtG_8'},
+    {tag: 'sport',      id: 'PLzV6tpn4rBOXuNhjI7m7-ZcQRIdKiq31Q'},
+    {tag: 'social',     id: 'PLzV6tpn4rBOXkqQQHrqeNjWBQB06XYvIK'},
     //{tag: 'corporate',  id: 'PLzV6tpn4rBOWCFYy4x1VkxZgb25YonsjS'},
     //{tag: 'tv-show',    id: 'PLzV6tpn4rBOWCFYy4x1VkxZgb25YonsjS', title: 'tv show'},
     //{tag: 'concert',    id: 'PLzV6tpn4rBOWXmSrPTxoIMmzFPrNLeveZ'},
